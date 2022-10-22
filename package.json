@@ -10,6 +10,22 @@
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
     "start": "cross-env NODE_ENV=production npm run dev:wrangler"
   },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "parser": "typescript",
+    "printWidth": 80,
+    "semi": false,
+    "singleAttributePerLine": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  },
+  "eslintIgnore": [
+    "/node_modules",
+    "/build",
+    "/public/build"
+  ],
   "dependencies": {
     "@remix-run/cloudflare": "^1.7.3",
     "@remix-run/cloudflare-pages": "^1.7.3",
