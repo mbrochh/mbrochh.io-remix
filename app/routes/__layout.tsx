@@ -5,7 +5,7 @@ import styles from 'highlight.js/styles/github-dark-dimmed.css'
 // HTML =======================================================================
 export default function Layout() {
   return (
-    <main className="container mx-auto prose lg:prose-xl py-10 px-10 md:px-0">
+    <main className="container mx-auto prose py-10 px-10 md:px-0">
       <Outlet />
     </main>
   )
