@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react'
 
+import stylesHighlightJs from 'highlight.js/styles/github-dark-dimmed.css'
 import styles from './styles/app.css'
 
 // HTML =======================================================================
@@ -30,7 +31,10 @@ export default function App() {
 
 // REMIX ======================================================================
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: styles }]
+  return [
+    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: stylesHighlightJs },
+  ]
 }
 
 export const meta: MetaFunction = () => ({
