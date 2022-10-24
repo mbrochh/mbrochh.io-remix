@@ -6,13 +6,18 @@ import { Link } from '@remix-run/react'
 export default function Index() {
   return (
     <div>
-      <h1 className="">Hello World!</h1>
-      <Link
-        to="/now/"
-        prefetch="intent"
-      >
-        Now
-      </Link>
+      <h1 className="">Martin Brochhaus</h1>
+      <h2>What am I doing now?</h2>
+      <p>
+        See my{' '}
+        <Link
+          to="/now/"
+          prefetch="intent"
+        >
+          now page
+        </Link>
+        .
+      </p>
     </div>
   )
 }

@@ -1,14 +1,16 @@
 import type { HeadersFunction, LoaderFunction } from '@remix-run/cloudflare'
 import { json } from '@remix-run/cloudflare'
 import { Link, useLoaderData } from '@remix-run/react'
-import * as firstPost from './first-post.mdx'
+import React from 'react'
+
+import * as firstPost from '~/routes/__layout/blog/2022-10-24.first-post.mdx'
 
 // HTML =======================================================================
 export default function BlogIndex() {
   const { posts } = useLoaderData()
 
   return (
-    <div>
+    <React.Fragment>
       <h1>Articles</h1>
       <ul>
         {posts.map((post: any) => (
@@ -19,17 +21,18 @@ export default function BlogIndex() {
             >
               {post.title}
             </Link>
+            <p className="mt-0">{post.description}</p>
           </li>
         ))}
       </ul>
-    </div>
+    </React.Fragment>
   )
 }
 
 // UTILS ======================================================================
 const postFromModule = (mod: any) => {
   return {
-    slug: mod.filename.replace('.mdx', ''),
+    slug: mod.filename.replace('.mdx', '').replace('.', '/') + '/',
     ...mod.attributes.meta,
   }
 }

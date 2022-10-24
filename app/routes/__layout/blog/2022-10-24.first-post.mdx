@@ -1,0 +1,60 @@
+---
+title: Hello World!
+date: 2022-10-23
+meta: 
+  title: Hello World!
+  description: Just testing the theme for this blog.
+headers:
+  Cache-Control: max-age=5, s-maxage=600
+---
+
+import { ArticleHeader } from '~/components/ArticleHeader'
+
+<ArticleHeader date={attributes.date} title={attributes.title} />
+
+This is just a post to test my theme.
+
+Here is another paragraph.
+
+## Sub-headline
+
+And some code with syntax highlighting:
+
+### For JavaScript
+
+```js
+const test = "hello world"
+```
+
+### For Python
+
+```py
+while True:
+  print(1)
+```
+
+## Elements
+
+### Unordered List:
+
+* Element 1
+* Element 2
+  * Element 2.1
+  * Element 2.2
+* Element 3
+
+### Quote
+
+> To be or not to be.
+
+### Bold text
+
+Here is **some bold text**.
+
+### Italic text
+
+Here is *some text in italics*.
+
+### Links
+
+Click here to go [Home](/).
